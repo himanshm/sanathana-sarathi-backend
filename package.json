@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "type": "module",
   "description": "Sanathana Sarathi SSSSO India Magazine Project for SSSSO MP",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -11,8 +11,12 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.20.2",
+    "csvtojson": "^2.0.10",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
     "mongodb": "^6.3.0",
-    "mongoose": "^8.0.3"
+    "mongoose": "^8.0.3",
+    "multer": "^1.4.5-lts.1",
+    "pdfkit": "^0.14.0"
   }
 }
