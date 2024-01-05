@@ -2,8 +2,9 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
-import csvParserRoute from './controllers/csvParser.js';
-import labelGeneratorRoute from './controllers/labelGenerator.js';
+import uploadCsvRoute from './routes/uploadCsvRoute.js'
+import printLabelRoute from './routes/printLabelRoute.js'
+// import labelGenerator from './labelGenerator.js'
 
 dotenv.config();
 
@@ -22,8 +23,9 @@ const connectToMongoDB = async () => {
 };
 connectToMongoDB();
 
-app.use('/api', csvParserRoute);
-app.use('/api', labelGeneratorRoute);
+app.use('/api', uploadCsvRoute);
+app.use('/api', printLabelRoute);
+// app.use('/api', labelGenerator);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server is running on port ${PORT}`));
