@@ -1,6 +1,6 @@
 import { mongoose } from 'mongoose';
 
-const subscriberSchema = new mongoose.Schema({
+const subscriberDataSchema = new mongoose.Schema({
   subscriberName: {
     type: String,
   },
@@ -11,5 +11,5 @@ const subscriberSchema = new mongoose.Schema({
     type: String,
   },
 });
-const Subscriber = mongoose.model('Subscriber', subscriberSchema);
-export default Subscriber
+const SubscriberData = mongoose.model('SubscriberData', subscriberDataSchema);
+export default SubscriberData
